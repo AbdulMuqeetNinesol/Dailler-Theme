@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CallActivity">
+
+    <ImageView
+        android:id="@+id/imageBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img1"
+        android:foreground="#33000000"
+        android:contentDescription="@string/todo" />
+    <ImageView
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/textDisplayName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.1"
+        android:text="dsadsada"
+        android:textSize="@dimen/_25ssp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space"
+        />
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textDisplayName"
+        android:textSize="@dimen/_25ssp"
+        android:textColor="@color/white"
+        android:text="Calling..."
+        android:gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/textDuration"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="00:00:00"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textStatus"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonAnswer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/green_circle"
+        android:src="@drawable/baseline_phone_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDuration"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintEnd_toStartOf="@id/buttonHangup"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonHangup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/red_circle"
+        android:src="@drawable/baseline_phone_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toEndOf="@+id/buttonAnswer"
+        app:layout_constraintTop_toBottomOf="@+id/textDuration"
+        app:layout_constraintWidth_percent="0.3" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
